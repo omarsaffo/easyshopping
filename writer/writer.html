@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\Users\ghait\OneDrive\Desktop\web-pages\EasyShopping\assets/fast-trolly.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Write Easy</title>
+</head>
+
+<body>
+    <header>
+        <div>EasyShopping</div>
+        <nav>
+            <ul>
+                <li><a href="..\home\home.html">Home</a></li>
+                <li><a href="..\contact-us\contact-us.html">Contact Us</a></li>
+                <li><a href="..\shopper\shopper.html">Shopper</a></li>
+                <li><a href="..\writer\writer.html">Writer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="bread-list">
+        <h1>Bread</h1>
+        <button onclick="insertItem('outputArea', 'Sonntagsbrötchen')">Sonntagsbrötchen</button>
+        <button onclick="insertItem('outputArea', 'Bäckerbrötchen rustikal')">Bäckerbrötchen rustikal</button>
+        <button onclick="insertItem('outputArea', 'Roggenbrot')">Roggenbrot</button>
+        <form class="category-form">
+            <input type="text" name="bread-custom-input" placeholder="Custom order" id="bread-custom-input">
+            <button type="submit" onclick="insertItem('outputArea', document.getElementById('bread-custom-input').value)">Submit</button>
+        </form>
+    </div>
+    <div id="fruits-and-vegetables-list">
+        <h1>Fruits and Vegetables</h1>
+        <button onclick="insertItem('outputArea', 'cucumber')">cucumber</button>
+        <button onclick="insertItem('outputArea', 'Tomato')">Tomato</button>
+        <button onclick="insertItem('outputArea', 'lettuce')">lettuce</button>
+        <form class="category-form">
+            <input type="text" name="fruits-and-vegetables-custom-input" placeholder="Custom order" id="fruits-and-vegetables-custom-input">
+            <button type="submit" onclick="insertItem('outputArea', document.getElementById('fruits-and-vegetables-custom-input').value)">Submit</button>
+        </form>
+    </div>
+
+    <div id="animal-products-list">
+        <h1>Animal Products</h1>
+        <button onclick="insertItem('outputArea', 'eggs')">eggs</button>
+        <button onclick="insertItem('outputArea', 'milk')">milk</button>
+        <button onclick="insertItem('outputArea', 'cheese')">cheese</button>
+        <form class="category-form">
+            <input type="text" name="animal-products-custom-input" placeholder="Custom order" id="animal-products-custom-input">
+            <button type="submit" onclick="insertItem('outputArea', document.getElementById('animal-products-custom-input').value)">Submit</button>
+        </form>
+    </div>
+
+    <div id="cooking-and-backing-products-list">
+        <h1>Cooking and Baking Products</h1>
+        <button onclick="insertItem('outputArea', 'wheat')">wheat</button>
+        <button onclick="insertItem('outputArea', 'coaco')">coaco</button>
+        <button onclick="insertItem('outputArea', 'Macaroni')">Macaroni</button>
+        <button onclick="insertItem('outputArea', 'Ketchup')">Ketchup</button>
+        <form class="category-form">
+            <input type="text" name="cooking-and-backing-custom-input" placeholder="Custom order" id="cooking-and-backing-custom-input">
+            <button type="submit" onclick="insertItem('outputArea', document.getElementById('cooking-and-backing-custom-input').value)">Submit</button>
+        </form>
+    </div>
+
+    <div id="canned-products-list">
+        <h1>Canned Products</h1>
+        <button onclick="insertItem('outputArea', 'tunna')">tunna</button>
+        <button onclick="insertItem('outputArea', 'sweet mais')">sweet mais</button>
+        <button onclick="insertItem('outputArea', 'canned fruits')">canned fruits</button>
+        <form class="category-form">
+            <input type="text" name="canned-products-custom-input" placeholder="Custom order" id="canned-products-custom-input">
+            <button type="submit" onclick="insertItem('outputArea', document.getElementById('canned-products-custom-input').value)">Submit</button>
+        </form>
+    </div>
+
+    <div id="snacks-list">
+        <h1>Snacks</h1>
+        <button onclick="insertItem('outputArea', 'chips')">chips</button>
+        <button onclick="insertItem('outputArea', 'nuts')">nuts</button>
+        <button onclick="insertItem('outputArea', 'buiscuits')">buiscuits</button>
+        <form class="category-form">
+            <input type="text" name="snacks-custom-input" placeholder="Custom order" id="snacks-custom-input">
+            <button type="submit" onclick="insertItem('outputArea', document.getElementById('snacks-custom-input').value)">Submit</button>
+        </form>
+    </div>
+
+    <div id="hygien-products-list">
+        <h1>Hygien Products</h1>
+        <button onclick="insertItem('outputArea', 'shampoo')">shampoo</button>
+        <button onclick="insertItem('outputArea', 'toothpaste')">toothpaste</button>
+        <button onclick="insertItem('outputArea', 'soap')">soap</button>
+        <form class="category-form">
+            <input type="text" name="hygien-custom-input" placeholder="Custom order" id="hygien-custom-input">
+            <button type="submit" onclick="insertItem('outputArea', document.getElementById('hygien-custom-input').value)">Submit</button>
+        </form>
+    </div>
+
+    <div>
+        <h1>Orders</h1>
+        <section id="outputArea"></section>
+        <button id="sendListButton">Send Shopping List</button>
+    </div>
+</body>
+</html>

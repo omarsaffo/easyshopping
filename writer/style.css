@@ -1,0 +1,74 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#bread-list, #fruits-and-vegetables-list, #animal-products-list,
+#cooking-and-backing-products-list, #canned-products-list, #snacks-list,
+#hygien-products-list {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin: 5px;
+}
+
+#outputArea {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+}
+button:hover {
+    background-color: #45a049;
+}
+
+.listItem {
+            display: flex;
+            align-items: center;
+        }
