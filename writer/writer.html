@@ -7,102 +7,161 @@
     <link rel="icon" href="C:\Users\ghait\OneDrive\Desktop\web-pages\EasyShopping\assets/fast-trolly.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <title>Write Easy</title>
+    <script src="app.js"></script>
+    <script src="writer.js"></script> 
+    <style>
+        .custom-popup {
+            display: inline-block;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            z-index: 999;
+            animation: fadeInOut 2s ease-out;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\Users\ghait\OneDrive\Desktop\web-pages\EasyShopping\assets/fast-trolly.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Write Easy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
     <header>
-        <div>EasyShopping</div>
-        <nav>
-            <ul>
-                <li><a href="..\home\home.html">Home</a></li>
-                <li><a href="..\contact-us\contact-us.html">Contact Us</a></li>
-                <li><a href="..\shopper\shopper.html">Shopper</a></li>
-                <li><a href="..\writer\writer.html">Writer</a></li>
+    
+        <nav class="navbar navbar-expand-sm">
+          <div class="navbar-brand">EasyShopping</div>
+          <!-- <ul >
+            <li><a href="home.html">Home</a></li>
+            <li><a href="./contact-us/contact-us.html">Contact Us</a></li>
+            <li><a href=".\shopper\shopper.html">Shopper</a></li>
+            <li><a href=".\writer\writer.html">Writer</a></li>
+    
+          </ul> -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="../home/home.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../contact-us/contact-us.html">contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="..\shopper\shopper.html">shopper</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="writer.html">writer</a>
+              </li>
             </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn-danger btn-outline-dark my-2 my-sm-0" type="submit" id="search">Search</button>
+            </form>
+          </div>
         </nav>
-    </header>
+      </header>
 
     <div id="bread-list">
         <h1>Bread</h1>
-        <button onclick="insertItem('outputArea', 'Sonntagsbrötchen')">Sonntagsbrötchen</button>
-        <button onclick="insertItem('outputArea', 'Bäckerbrötchen rustikal')">Bäckerbrötchen rustikal</button>
-        <button onclick="insertItem('outputArea', 'Roggenbrot')">Roggenbrot</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'Sonntagsbrötchen')">Sonntagsbrötchen</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'Bäckerbrötchen rustikal')">Bäckerbrötchen rustikal</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'Roggenbrot')">Roggenbrot</button>
         <form class="category-form">
             <input type="text" name="bread-custom-input" placeholder="Custom order" id="bread-custom-input">
-            <button type="submit" onclick="insertItem('outputArea', document.getElementById('bread-custom-input').value)">Submit</button>
+            <button class="btn btn-success" type="submit" onclick="insertItem('outputArea', document.getElementById('bread-custom-input').value)">Submit</button>
         </form>
     </div>
     <div id="fruits-and-vegetables-list">
         <h1>Fruits and Vegetables</h1>
-        <button onclick="insertItem('outputArea', 'cucumber')">cucumber</button>
-        <button onclick="insertItem('outputArea', 'Tomato')">Tomato</button>
-        <button onclick="insertItem('outputArea', 'lettuce')">lettuce</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'cucumber')">cucumber</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'Tomato')">Tomato</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'lettuce')">lettuce</button>
         <form class="category-form">
             <input type="text" name="fruits-and-vegetables-custom-input" placeholder="Custom order" id="fruits-and-vegetables-custom-input">
-            <button type="submit" onclick="insertItem('outputArea', document.getElementById('fruits-and-vegetables-custom-input').value)">Submit</button>
+            <button class="btn btn-success" type="submit" onclick="insertItem('outputArea', document.getElementById('fruits-and-vegetables-custom-input').value)">Submit</button>
         </form>
     </div>
 
     <div id="animal-products-list">
         <h1>Animal Products</h1>
-        <button onclick="insertItem('outputArea', 'eggs')">eggs</button>
-        <button onclick="insertItem('outputArea', 'milk')">milk</button>
-        <button onclick="insertItem('outputArea', 'cheese')">cheese</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'eggs')">eggs</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'milk')">milk</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'cheese')">cheese</button>
         <form class="category-form">
             <input type="text" name="animal-products-custom-input" placeholder="Custom order" id="animal-products-custom-input">
-            <button type="submit" onclick="insertItem('outputArea', document.getElementById('animal-products-custom-input').value)">Submit</button>
+            <button class="btn btn-success" type="submit" onclick="insertItem('outputArea', document.getElementById('animal-products-custom-input').value)">Submit</button>
         </form>
     </div>
 
     <div id="cooking-and-backing-products-list">
         <h1>Cooking and Baking Products</h1>
-        <button onclick="insertItem('outputArea', 'wheat')">wheat</button>
-        <button onclick="insertItem('outputArea', 'coaco')">coaco</button>
-        <button onclick="insertItem('outputArea', 'Macaroni')">Macaroni</button>
-        <button onclick="insertItem('outputArea', 'Ketchup')">Ketchup</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'wheat')">wheat</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'coaco')">coaco</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'Macaroni')">Macaroni</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'Ketchup')">Ketchup</button>
         <form class="category-form">
             <input type="text" name="cooking-and-backing-custom-input" placeholder="Custom order" id="cooking-and-backing-custom-input">
-            <button type="submit" onclick="insertItem('outputArea', document.getElementById('cooking-and-backing-custom-input').value)">Submit</button>
+            <button class="btn btn-success" type="submit" onclick="insertItem('outputArea', document.getElementById('cooking-and-backing-custom-input').value)">Submit</button>
         </form>
     </div>
 
     <div id="canned-products-list">
         <h1>Canned Products</h1>
-        <button onclick="insertItem('outputArea', 'tunna')">tunna</button>
-        <button onclick="insertItem('outputArea', 'sweet mais')">sweet mais</button>
-        <button onclick="insertItem('outputArea', 'canned fruits')">canned fruits</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'tunna')">tunna</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'sweet mais')">sweet mais</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'canned fruits')">canned fruits</button>
         <form class="category-form">
             <input type="text" name="canned-products-custom-input" placeholder="Custom order" id="canned-products-custom-input">
-            <button type="submit" onclick="insertItem('outputArea', document.getElementById('canned-products-custom-input').value)">Submit</button>
+            <button class="btn btn-success" type="submit" onclick="insertItem('outputArea', document.getElementById('canned-products-custom-input').value)">Submit</button>
         </form>
     </div>
 
     <div id="snacks-list">
         <h1>Snacks</h1>
-        <button onclick="insertItem('outputArea', 'chips')">chips</button>
-        <button onclick="insertItem('outputArea', 'nuts')">nuts</button>
-        <button onclick="insertItem('outputArea', 'buiscuits')">buiscuits</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'chips')">chips</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'nuts')">nuts</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'buiscuits')">buiscuits</button>
         <form class="category-form">
             <input type="text" name="snacks-custom-input" placeholder="Custom order" id="snacks-custom-input">
-            <button type="submit" onclick="insertItem('outputArea', document.getElementById('snacks-custom-input').value)">Submit</button>
+            <button class="btn btn-success" type="submit" onclick="insertItem('outputArea', document.getElementById('snacks-custom-input').value)">Submit</button>
         </form>
     </div>
 
     <div id="hygien-products-list">
         <h1>Hygien Products</h1>
-        <button onclick="insertItem('outputArea', 'shampoo')">shampoo</button>
-        <button onclick="insertItem('outputArea', 'toothpaste')">toothpaste</button>
-        <button onclick="insertItem('outputArea', 'soap')">soap</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'shampoo')">shampoo</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'toothpaste')">toothpaste</button>
+        <button type="button" class="btn btn-success" onclick="insertItem('outputArea', 'soap')">soap</button>
         <form class="category-form">
             <input type="text" name="hygien-custom-input" placeholder="Custom order" id="hygien-custom-input">
-            <button type="submit" onclick="insertItem('outputArea', document.getElementById('hygien-custom-input').value)">Submit</button>
+            <button class="btn btn-success" type="submit" onclick="insertItem('outputArea', document.getElementById('hygien-custom-input').value)">Submit</button>
         </form>
     </div>
 
-    <div>
+    <div id="orders-list">
         <h1>Orders</h1>
         <section id="outputArea"></section>
-        <button id="sendListButton">Send Shopping List</button>
+        <button id="sendListButton" class="btn btn-success" >Send Shopping List</button>
     </div>
+    <div class="bottom">
+        <footer>
+          <p>&copy; 2023 EasyShopping. All rights reserved.</p>
+        </footer>
+      </div>
 </body>
 </html>
