@@ -89,10 +89,48 @@ function deleteButtonFunction(listDiv, outputArea, item) {
   }
 }
 
+let shoppingListItems = [];
+
+// function sendShoppingList() {
+//   const outputArea = document.getElementById('outputArea');
+//   shoppingListItems = Array.from(outputArea.children)
+//       .map(item => item.firstChild.textContent.trim());
+
+//   console.log('Shopping List Sent:', shoppingListItems);
+
+// }
+
 function sendShoppingList() {
   const outputArea = document.getElementById('outputArea');
-  const shoppingListItems = Array.from(outputArea.children)
+  shoppingListItems = Array.from(outputArea.children)
       .map(item => item.firstChild.textContent.trim());
-
+  
   console.log('Shopping List Sent:', shoppingListItems);
+
+  if (shoppingListItems.length === 0) {
+    showCustomPopup("Shopping list is empty");
+    return; // Exit the function if the shopping list is empty
+  }
+
+  // Send the shopping list to the server
+  fetch('http://localhost:3000/api/send-list', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ list: shoppingListItems }),
+  })
+  .then(response => response.text())
+  .then(data => {
+    showCustomPopup("List sent successfully");
+    console.log('Server response:', data);
+    // Handle the server response as needed
+  })
+  .catch(error => {
+    console.error('Error sending shopping list:', error);
+    showCustomPopup("Error sending shopping list");
+    // Handle the error as needed
+  });
 }
+
+

@@ -2,18 +2,18 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #f2f2f2 !important;
     color: #333;
 }
 
 header {
     background-color: #4CAF50;
-    padding: 10px;
+    padding: 1em;
     color: white;
     text-align: center;
 }
 
-nav ul {
+/* nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -22,12 +22,12 @@ nav ul {
 nav li {
     display: inline;
     margin-right: 20px;
-}
+} */
 
 nav a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 16px;
 }
 
@@ -68,3 +68,17 @@ footer {
 #getShoppingListButton {
     margin: 5px;
 }
+
+#title {
+    margin: 20px;
+}
+
+#homebtn {
+    font-weight: bold;
+}
+
+
+.list-item {
+    margin: 8px;
+  }
+  

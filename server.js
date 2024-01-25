@@ -21,29 +21,29 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Middleware to parse JSON data in the request body
 app.use(express.json());
 
-app.use('/home', express.static('..\\shopping-app\\home'));
-
+app.use('/home', express.static(path.join(__dirname, 'home')));
 // Serve static files from the 'shopper' folder
-app.use('/shopper', express.static('..\\shopping-app\\shopper'));
-
+app.use('/shopper', express.static(path.join(__dirname, 'shopper')));
 // Serve static files from the 'writer' folder
-app.use('/writer', express.static('..\\shopping-app\\writer'));
+app.use('/writer', express.static(path.join(__dirname, 'writer')));
 
-app.use('/contact-us', express.static('..\\shopping-app\\contact-us'));
-
+app.use('/contact-us', express.static(path.join(__dirname, 'contact-us')));
 let receivedList = [];
 
 // Endpoint to receive the list from the writer
 app.post('/api/send-list', (req, res) => {
-  const { list } = req.body;
-  receivedList = list;
+//   const { list } = req.body;
+  console.log('Received List before:', receivedList);
+  receivedList = req.body;
   console.log('Received List:', receivedList); 
   res.send('List received successfully.');
 });
 
 // Endpoint to get the received list for the shopper
 app.get('/api/get-received-list', (req, res) => {
+  console.log("list value :" , receivedList)
   res.json({ list: receivedList });
+  console.log("list recieved :" , receivedList)
 });
 
 app.post('/api/send-email', (req, res) => {
