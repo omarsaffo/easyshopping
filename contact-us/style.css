@@ -1,84 +1,182 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2 !important;
+@media (min-width: 700px) { 
+    #smallnav {
+        display: none;
+    }
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2 !important;
+    }
+    
+    header {
+        background-color: #4CAF50;
+        padding: 1em;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    #contact-form {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    #contact-form h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        margin-bottom: 5px;
+    }
+    
+    input,
+    textarea {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #4CAF50;
+        color: white;
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+    
+    #contact-form {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* border: 5px solid #FFFF00; */
+        padding: 10px;
+        width: 700px;
+    }
+    
+    #homebtn {
+        font-weight: bold;
+    }
+    
 }
 
-header {
-    background-color: #4CAF50;
-    padding: 1em;
-    color: white;
-    text-align: center;
-}
+@media (max-width: 700px) {
+    #bignav {
+        display: none;
+    }
 
-
-#contact-form {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact-form h1 {
-    text-align: center;
-    color: #333;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-}
-
-input,
-textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #4CAF50;
-    color: white;
-}
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-}
-
-#contact-form {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    /* border: 5px solid #FFFF00; */
-    padding: 10px;
-    width: 700px;
-}
-
-#homebtn {
-    font-weight: bold;
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2 !important;
+    }
+    
+    header {
+        background-color: #4CAF50;
+        padding: 1em;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    #contact-form {
+        max-width: 90%;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transform: translateY(30%);
+    }
+    
+    #contact-form h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        margin-bottom: 5px;
+    }
+    
+    input,
+    textarea {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #4CAF50;
+        color: white;
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+    
+    /* #contact-form {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        width: 90%;
+    } */
+    
+    #homebtn {
+        font-weight: bold;
+    }
 }

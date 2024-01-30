@@ -1,84 +1,159 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2 !important;
-    color: #333;
+@media (min-width: 700px) { 
+    #smallnav {
+        display: none;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2 !important;
+        color: #333;
+    }
+    
+    header {
+        background-color: #4CAF50;
+        padding: 1em;
+        color: white;
+        text-align: center;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: white;
+        /* font-weight: bold; */
+        font-size: 16px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    #outputArea {
+        margin: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    #getShoppingListButton {
+        margin: 5px;
+    }
+    
+    #title {
+        margin: 20px;
+    }
+    
+    #homebtn {
+        font-weight: bold;
+    }
+    
+    
+    .list-item {
+        margin: 8px;
+      }
+      
 }
 
-header {
-    background-color: #4CAF50;
-    padding: 1em;
-    color: white;
-    text-align: center;
+@media (max-width : 700px) {
+    #bignav {
+        display: none;
+    }
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2 !important;
+        color: #333;
+    }
+    
+    header {
+        background-color: #4CAF50;
+        padding: 1em;
+        color: white;
+        text-align: center;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: white;
+        /* font-weight: bold; */
+        font-size: 16px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    #outputArea {
+        margin: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    #getShoppingListButton {
+        margin: 5px;
+    }
+    
+    #title {
+        margin: 20px;
+    }
+    
+    #homebtn {
+        font-weight: bold;
+    }
+    
+    
+    .list-item {
+        margin: 8px;
+      }
+      
 }
-
-/* nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 20px;
-} */
-
-nav a {
-    text-decoration: none;
-    color: white;
-    /* font-weight: bold; */
-    font-size: 16px;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-#outputArea {
-    margin: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #4CAF50;
-    color: white;
-}
-
-#getShoppingListButton {
-    margin: 5px;
-}
-
-#title {
-    margin: 20px;
-}
-
-#homebtn {
-    font-weight: bold;
-}
-
-
-.list-item {
-    margin: 8px;
-  }
-  

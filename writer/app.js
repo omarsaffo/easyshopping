@@ -89,6 +89,10 @@ function deleteButtonFunction(listDiv, outputArea, item) {
   }
 }
 
+function GoToDirectory(path) {
+  window.location.href = path;
+}
+
 let shoppingListItems = [];
 
 // function sendShoppingList() {
@@ -113,7 +117,7 @@ function sendShoppingList() {
   }
 
   // Send the shopping list to the server
-  fetch('http://localhost:3000/api/send-list', {
+  fetch('/api/send-list', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

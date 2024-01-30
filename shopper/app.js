@@ -11,7 +11,7 @@ function getReceivedList() {
     outputArea.removeChild(oldList);
   }
 
-  fetch('http://localhost:3000/api/get-received-list')
+  fetch('/api/get-received-list')
     .then(response => response.json())
     .then(data => {
       const receivedList = data.list.list;
