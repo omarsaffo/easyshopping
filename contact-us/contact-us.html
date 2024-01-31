@@ -75,7 +75,7 @@
   </header>
    <div id="contact-form">
         <h1>Contact Us</h1>
-        <form>
+        <form id="contactFormform">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -85,7 +85,7 @@
             <label for="message">Your Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="button" id = "sendFormButton" class="btn btn-success">Submit</button>
+            <button type="button" id = "sendFormButton" class="btn btn-success" onclick="submitForm()">Submit</button>
         </form>
       </div>
     <div class="fixed-bottom">
