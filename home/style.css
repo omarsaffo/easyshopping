@@ -1,4 +1,8 @@
 @media (min-width: 700px) { 
+    #smallfooter {
+        display: none;
+    }
+    
     body {
         font-family: 'Arial', sans-serif;
         margin: 0;
@@ -98,6 +102,10 @@
 }
 
 @media (max-width : 700px) {
+    #bigfooter {
+        display: none;
+    }
+    
     #bignav {
         display: none;
     }

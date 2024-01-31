@@ -9,7 +9,10 @@
         padding: 0;
         background-color: #f2f2f2 !important;
         color: #333;
+        min-height: 100vh; /* Set minimum height to full viewport height */
+        position: relative;
     }
+    
     
     header {
         background-color: #4CAF50;
@@ -53,6 +56,9 @@
     }
     
     footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
         text-align: center;
         padding: 20px;
         background-color: #4CAF50;
@@ -89,8 +95,14 @@
         padding: 0;
         background-color: #f2f2f2 !important;
         color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
     
+    main {
+        flex: 1; /* This will make the main content area take up remaining space */
+    }
     header {
         background-color: #4CAF50;
         padding: 1em;
