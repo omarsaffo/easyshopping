@@ -2,6 +2,10 @@
     #smallnav {
         display: none;
     }
+
+    #smallfooter{
+        display: none;
+    }
     
     body {
         font-family: 'Arial', sans-serif;
@@ -118,11 +122,18 @@
         display: none;
     }
 
+    #bigfooter{
+        display: none;
+    }
+
     body {
-        font-family: 'Arial', sans-serif;
         margin: 0;
         padding: 0;
+        font-family: 'Arial', sans-serif;
         background-color: #f2f2f2 !important;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
     
     header {
@@ -132,21 +143,28 @@
         text-align: center;
     }
     
+    #wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Center content vertically */
+        min-height: calc(100vh - 20px); /* Adjust based on your footer height */
+    }
     
     #contact-form {
-        max-width: 90%;
-        margin: 20px auto;
+        width: 90%;
+        max-width: 90%; /* Adjust based on your design */
+        margin-top: 60%; /* Center the form */
         background-color: #fff;
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        transform: translateY(30%);
+        position: relative;
+        top: 70%;
+        transform: translateY(-35%);
     }
     
-    #contact-form h1 {
-        text-align: center;
-        color: #333;
-    }
     
     form {
         display: flex;
@@ -180,7 +198,8 @@
     
     footer {
         text-align: center;
-        padding: 20px;
+        padding: 20px; /* Reduced padding for the footer */
+        margin-top: auto; /* Push the footer to the bottom */
         background-color: #4CAF50;
         color: white;
     }
@@ -202,6 +221,7 @@
     #homebtn {
         font-weight: bold;
     }
+
     .custom-popup {
         display: inline-block;
         position: fixed;

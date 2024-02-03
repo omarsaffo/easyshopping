@@ -16,7 +16,6 @@
 
 <body>
   <header>
-    
     <nav class="navbar navbar-expand-sm" id="bignav">
       <div class="navbar-brand">EasyShopping</div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -34,10 +33,6 @@
             <a class="nav-link" href="..\writer\writer.html">writer</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn-danger btn-outline-dark my-2 my-sm-0" type="submit" id="search">Search</button>
-        </form>
       </div>
     </nav>
     <div class="pos-f-t" id="smallnav">
@@ -73,26 +68,35 @@
       </nav>
     </div>
   </header>
-   <div id="contact-form">
-        <h1>Contact Us</h1>
-        <form id="contactFormform">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+  <div id="wrapper">
+    <div id="contact-form">
+      <h1>Contact Us</h1>
+      <form id="contactFormform">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
 
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="button" id = "sendFormButton" class="btn btn-success" onclick="submitForm()">Submit</button>
-        </form>
-      </div>
-    <div class="fixed-bottom">
-      <footer>
-        <p>&copy; 2023 EasyShopping. All rights reserved.</p>
-      </footer>
+          <button type="button" id = "sendFormButton" class="btn btn-success" onclick="submitForm()">Submit</button>
+      </form>
     </div>
+  </div>
+  
+  <footer id="smallfooter">
+    <p>&copy; 2023 EasyShopping. All rights reserved.</p>
+  </footer>
+  
+  <div class="fixed-bottom" id="bigfooter">
+    <footer class="bigfooter">
+      <p>&copy; 2023 EasyShopping. All rights reserved.</p>
+    </footer>
+  </div>
+  
+
     
 </body>
 </html>

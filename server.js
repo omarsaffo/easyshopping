@@ -62,7 +62,7 @@ app.post('/api/send-email', (req, res) => {
     // Configure the email options
     const mailOptions = {
         from: 'easyshopping.utiliser@gmail.com',
-        to: 'ghaith.saffo@gmail.com', // Replace with your actual email address
+        to: ['ghaith.saffo@gmail.com', 'menanaya222@gmail.com'], // Replace with your actual email address
         subject: 'New Contact Us Form Submission',
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
