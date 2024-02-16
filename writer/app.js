@@ -27,18 +27,20 @@ function showCustomPopup(message) {
 function insertItem(outputId, input) {
   const outputArea = document.getElementById(outputId);
   const item = input;
-  
+
   if (input.trim() === '') {
     showCustomPopup("box is empty");
     return; // Exit the function if the input is empty
   }
 
-
+  
   showCustomPopup("Item added to list");
+
 
   const existingItems = Array.from(outputArea.childNodes).filter(child => {
       return child.nodeType === 1 && child.tagName.toLowerCase() === 'div' &&
           child.id === input;
+
   });
 
   existingItems.forEach((i) => {
@@ -77,6 +79,7 @@ function insertItem(outputId, input) {
       deleteButtonFunction(listDiv, outputArea, item);
   });
 }
+
 
 function deleteButtonFunction(listDiv, outputArea, item) {
   const currentCounter = parseInt(listDiv.firstChild.dataset.count) || 0;
@@ -128,6 +131,7 @@ function sendShoppingList() {
   .then(data => {
     showCustomPopup("List sent successfully");
     console.log('Server response:', data);
+    shoppingListItems = []; // clear the shopping list    
     // Handle the server response as needed
   })
   .catch(error => {
