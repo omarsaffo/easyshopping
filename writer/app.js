@@ -96,7 +96,7 @@ function GoToDirectory(path) {
   window.location.href = path;
 }
 
-let shoppingListItems = [];
+var shoppingListItems = [];
 
 // function sendShoppingList() {
 //   const outputArea = document.getElementById('outputArea');
@@ -119,6 +119,7 @@ function sendShoppingList() {
     return; // Exit the function if the shopping list is empty
   }
 
+
   // Send the shopping list to the server
   fetch('/api/send-list', {
     method: 'POST',
@@ -131,7 +132,6 @@ function sendShoppingList() {
   .then(data => {
     showCustomPopup("List sent successfully");
     console.log('Server response:', data);
-    shoppingListItems = []; // clear the shopping list    
     // Handle the server response as needed
   })
   .catch(error => {
