@@ -80,7 +80,7 @@
     
     footer {
         text-align: center;
-        padding: 20px;
+        padding: 10px;
         background-color: #4CAF50;
         color: white;
     }
@@ -161,7 +161,7 @@
     #get-started {
         text-align: center;
         top: 80%;
-        margin-bottom: 30%;
+        margin-bottom: 15%;
         margin-top: 10%;
     }
     
@@ -208,9 +208,7 @@
 @media (max-height : 700px) {
     #get-started {
         text-align: center;
-        top: 80%;
-        margin-bottom: 15%;
-        margin-top: 10%;
+        top: 80%;        
     }
 }
 

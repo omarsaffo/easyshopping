@@ -77,21 +77,21 @@ sendListButton.addEventListener('click', sendShoppingList);
     //}
 
   // Function to send the shopping list to the server
-    function sendShoppingList() {
-      const outputArea = document.getElementById('outputArea');
+    // function sendShoppingList() {
+    //   const outputArea = document.getElementById('outputArea');
 
-      const shoppingListItems = Array.from(outputArea.children)
-        .filter(item => item.classList.contains('list-item'))
-        .map(item => item.textContent.trim());
+    //   const shoppingListItems = Array.from(outputArea.children)
+    //     .filter(item => item.classList.contains('list-item'))
+    //     .map(item => item.textContent.trim());
 
-      fetch('http://localhost:3000/api/send-list', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ list: shoppingListItems }),
-      })
-        .then(response => response.text())
-        .then(data => console.log(data))
-        .catch(error => console.error('Error:', error));
-    }
+    //   fetch('http://localhost:3000/api/send-list', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ list: shoppingListItems }),
+    //   })
+    //     .then(response => response.text())
+    //     .then(data => console.log(data))
+    //     .catch(error => console.error('Error:', error));
+    // }
